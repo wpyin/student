@@ -1,7 +1,7 @@
 <?php
 /*实现add功能*/
 header("content_type:text/html;charset=utf8");
-$conn=mysqli_connect("localhost","root","root","study");
+$conn=mysqli_connect("localhost","root","","study");
 mysqli_set_charset($conn,"utf8");/*先连接数据库*/
 if($conn){
 
