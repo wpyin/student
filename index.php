@@ -29,7 +29,7 @@
 		$conn=mysqli_connect("localhost","root","","study");
 		mysqli_set_charset($conn,"utf8");
 		/*执行sql语句*/
-		echo "cuowu";die;
+		//echo "cuowu";die;
 		$sql_select="SELECT * from stu";
 		/*读取*/
 		foreach ($conn -> query($sql_select) as $row){

@@ -17,8 +17,15 @@ if($conn){
 			$class = $_POST['class'];/*接受我们从页面传来的信息*/
 			$sql = "insert into stu(id,name,age,sex,class) values('$id',$name','$age','','$class')";//*对数据库进行插入
 			
-			@$rw = mysqli_query($conn,$sql);/*执行sql语句*/
-			echo $_POST['id'];die;
+			//$sql = "insert into stu(id,name,age,sex,class) values('$id','$name','$age','$sex','$class')";//*对数据库进行插入
+		    $sql = "insert into stu(id,name,age,sex,class) values('$id','$name','$age','$sex','$class')";//*对数据库进行插入亚旭原代码
+			$rw = mysqli_query($conn,$sql);/*执行sql语句*/
+			//if ($conn->query($sql) === TRUE) {
+            //   echo "新记录插入成功";
+            //   } else {
+            //     echo "Error: " . $sql . "<br>" . $conn->error;
+            //   }
+			//echo $_POST['id'];die;
 		    if($rw > 0){
 		    	echo "<script>ALERT('添加成功！');</script>";
 		    }
@@ -34,8 +41,9 @@ if($conn){
 			$age=$_POST['age'];
 			$sex=$_POST['sex'];
 			$class=$_POST['class'];/*接受我们从页面传来的信息*/
-			$sql = "UPDATE stu set  name='$name',age='$age',sex='$sex',class='$class' where id='$id';";//*对数据库进行插入
-			$rw=mysqli_query($conn,$sql);/*执行sql语句*/
+			$sqle = "UPDATE stu set  name='$name',age='$age',sex='$sex',class='$class' where id='$id';";//*对数据库进行插入
+			$rw=mysqli_query($conn,$sqle);/*执行sql语句*/
+			
 		    if($rw > 0){
 		    	echo "<script>alter('更新成功！');</script>";
 		    }

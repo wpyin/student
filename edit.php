@@ -8,7 +8,7 @@
 <?php
 /*连接数据库*/
         header("content-type:text/html;charset=utf8");
-		$conn=mysqli_connect("localhost","root","root","study");
+		$conn=mysqli_connect("localhost","root","","study");
 		mysqli_set_charset($conn,"utf8");
 		@$id=$_GET['id'];/*注意这里出现index错误*/
 		/*执行sql语句*/
