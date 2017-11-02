@@ -15,8 +15,6 @@ if($conn){
 
 			$sex = $_POST['sex'];
 			$class = $_POST['class'];/*接受我们从页面传来的信息*/
-			$sql = "insert into stu(id,name,age,sex,class) values('$id',$name','$age','','$class')";//*对数据库进行插入
-			
 			//$sql = "insert into stu(id,name,age,sex,class) values('$id','$name','$age','$sex','$class')";//*对数据库进行插入
 		    $sql = "insert into stu(id,name,age,sex,class) values('$id','$name','$age','$sex','$class')";//*对数据库进行插入亚旭原代码
 			$rw = mysqli_query($conn,$sql);/*执行sql语句*/
